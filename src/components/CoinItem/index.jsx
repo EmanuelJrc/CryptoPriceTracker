@@ -54,7 +54,7 @@ const CoinItem = ({ marketCoin }) => {
           <AntDesign
             name={price_change_percentage_24h < 0 ? "caretdown" : "caretup"}
             size={12}
-            color="white"
+            color={percentageColor}
             style={{ alignSelf: "center", marginRight: 5 }}
           />
           <Text style={{ color: percentageColor }}>
