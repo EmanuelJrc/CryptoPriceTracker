@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontWeight: "bold",
     marginHorizontal: 5,
-    fontSize: 15,
+    fontSize: 17,
   },
   rankContainer: {
     backgroundColor: "#585858",
