@@ -23,16 +23,16 @@ const CoinItem = ({ marketCoin }) => {
 
   const normalizeMarketCap = (marketCap) => {
     if (marketCap > 1e12) {
-      return `${(marketCap / 1e12).toFixed(3)} T`;
+      return `${Math.floor(marketCap / 1e12)} T`;
     }
     if (marketCap > 1e9) {
-      return `${(marketCap / 1e9).toFixed(3)} B`;
+      return `${Math.floor(marketCap / 1e9)} B`;
     }
     if (marketCap > 1e6) {
-      return `${(marketCap / 1e6).toFixed(3)} M`;
+      return `${Math.floor(marketCap / 1e6)} M`;
     }
     if (marketCap > 1e3) {
-      return `${(marketCap / 1e3).toFixed(3)} K`;
+      return `${Math.floor(marketCap / 1e3)} K`;
     }
     return marketCap;
   };
@@ -65,7 +65,7 @@ const CoinItem = ({ marketCoin }) => {
             style={{ alignSelf: "center", marginRight: 5 }}
           />
           <Text style={{ color: percentageColor }}>
-            {price_change_percentage_24h.toFixed(2)}%
+            {price_change_percentage_24h?.toFixed(2)}%
           </Text>
         </View>
       </View>
